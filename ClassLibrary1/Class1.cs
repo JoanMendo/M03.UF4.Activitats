@@ -1,4 +1,4 @@
-﻿namespace ClassLibrary1
+﻿namespace M03.UF4
 {
     //Exercici 1
     public class Persona
@@ -180,4 +180,61 @@
         }
     }
 
+
+    //Exercici 6
+
+    public class Vehicle
+    {
+        public string Marca { get; set; }
+
+        public string Modelo { get; set; }
+
+        public string Color { get; set; }
+
+        public string Tamaño { get; set; }
+
+        public string Potencia { get; set; }
+
+        public int VelocidadMàxima { get; set; }
+
+        public string FuenteEnergia { get; set; }
+
+        public Vehicle(string marca, string modelo, string color, string tamaño, string potencia, int velocidadMaxima, string fuenteEnergia)
+        {
+            Marca = marca;
+            Modelo = modelo;
+            Color = color;
+            Tamaño = tamaño;
+            Potencia = potencia;
+            VelocidadMàxima = velocidadMaxima;
+            FuenteEnergia = fuenteEnergia;
+        }
+
+        public string Arrancar()
+        {
+            return "Arrancando";
+        }
+
+        public string Parar()
+        {
+            return "Parando";
+        }
+
+        public string Acelerar()
+        {
+            return "Acelerando";
+        }
+
+        public string Frenar()
+        {
+            return "Frenando";
+        }
+
+        public string Girar()
+        {
+            return "Girando";
+        }
+    }
+
+  
 }
