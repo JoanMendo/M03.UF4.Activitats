@@ -236,5 +236,32 @@
         }
     }
 
-  
+    public class Ship : Vehicle 
+    {
+        public int Velas { get; set; }
+
+        public string TipoMotor { get; set; }
+
+        public Ship(string marca, string modelo, string color, string tamaño, string potencia, int velocidadMaxima, string fuenteEnergia, int velas, string tipoMotor) : base(marca, modelo, color, tamaño, potencia, velocidadMaxima, fuenteEnergia)
+        {
+            Velas = velas;
+            TipoMotor = tipoMotor;
+        }
+    }
+
+    public class WheeledVehicle : Vehicle
+    {
+        public int Ruedas { get; set; }
+
+        public string TipoRuedas { get; set; }
+
+        public int Puertas { get; set; }
+
+        public WheeledVehicle(string marca, string modelo, string color, string tamaño, string potencia, int velocidadMaxima, string fuenteEnergia, int ruedas, string tipoRuedas, int puertas) : base(marca, modelo, color, tamaño, potencia, velocidadMaxima, fuenteEnergia)
+        {
+            Ruedas = ruedas;
+            TipoRuedas = tipoRuedas;
+            Puertas = puertas;
+        }
+    }
 }
