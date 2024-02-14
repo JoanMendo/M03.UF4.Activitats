@@ -255,12 +255,36 @@
 
         public string TipoRuedas { get; set; }
 
-        public int Puertas { get; set; }
 
-        public WheeledVehicle(string marca, string modelo, string color, string tamaño, string potencia, int velocidadMaxima, string fuenteEnergia, int ruedas, string tipoRuedas, int puertas) : base(marca, modelo, color, tamaño, potencia, velocidadMaxima, fuenteEnergia)
+        public WheeledVehicle(string marca, string modelo, string color, string tamaño, string potencia, int velocidadMaxima, string fuenteEnergia, int ruedas, string tipoRuedas) : base(marca, modelo, color, tamaño, potencia, velocidadMaxima, fuenteEnergia)
         {
             Ruedas = ruedas;
             TipoRuedas = tipoRuedas;
+        }
+    }
+
+    public class Bicicleta : WheeledVehicle
+    {
+        public sbyte Marchas { get; set; }
+
+        public string Manillares { get; set; }
+
+        public Bicicleta(string marca, string modelo, string color, string tamaño, string potencia, int velocidadMaxima, string fuenteEnergia, int ruedas, string tipoRuedas, int puertas, sbyte marchas, string manillares) : base(marca, modelo, color, tamaño, potencia, velocidadMaxima, fuenteEnergia, ruedas, tipoRuedas)
+        {
+            Marchas = marchas;
+            Manillares = manillares;
+        }
+    }
+
+    public class Cotxe : WheeledVehicle
+    {
+        public string Matricula { get; set; }
+
+        public string Puertas { get; set; }
+
+        public Cotxe(string marca, string modelo, string color, string tamaño, string potencia, int velocidadMaxima, string fuenteEnergia, int ruedas, string tipoRuedas, string matricula, string puertas) : base(marca, modelo, color, tamaño, potencia, velocidadMaxima, fuenteEnergia, ruedas, tipoRuedas)
+        {
+            Matricula = matricula;
             Puertas = puertas;
         }
     }
